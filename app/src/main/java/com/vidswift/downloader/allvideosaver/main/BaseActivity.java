@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.vidswift.downloader.allvideosaver.R;
-import com.vidswift.downloader.allvideosaver.earn.WebNativeAds;
+import com.vidswift.downloader.allvideosaver.earn.natives;
 import com.vidswift.downloader.allvideosaver.earn.WebNavigationUtils;
 
 public class BaseActivity extends AppCompatActivity {
@@ -126,7 +126,7 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void loadNativeAdsIfNeeded() {
         if (showNativeAds && nativeAdContainer != null) {
-            WebNativeAds.NativeClass(nativeAdContainer, this);
+            natives.NativeClass(nativeAdContainer, this);
             nativeAdContainer.setVisibility(View.VISIBLE);
         } else if (nativeAdContainer != null) {
             nativeAdContainer.setVisibility(View.GONE);

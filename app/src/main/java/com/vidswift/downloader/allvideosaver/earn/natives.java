@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class WebNativeAds {
+public class natives {
 
     @SuppressLint("WrongConstant")
     public static void NativeClass(FrameLayout frameLayout, final Context context) {
