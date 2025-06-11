@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.vidswift.downloader.allvideosaver.R;
-import com.vidswift.downloader.allvideosaver.myAds.WebNativeAds;
-import com.vidswift.downloader.allvideosaver.myAds.WebNavigationUtils;
+import com.vidswift.downloader.allvideosaver.earn.WebNativeAds;
+import com.vidswift.downloader.allvideosaver.earn.WebNavigationUtils;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -79,7 +79,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void openPrivacyPolicy() {
-        Intent intent = new Intent(this, A4_PrivacyActivity.class);
+        Intent intent = new Intent(this, PolicyActivity.class);
         startActivity(intent);
     }
 

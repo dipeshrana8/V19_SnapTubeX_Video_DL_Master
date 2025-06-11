@@ -1,13 +1,13 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 
 import com.vidswift.downloader.allvideosaver.databinding.ActivityPrivacyBinding;
-import com.vidswift.downloader.allvideosaver.myAds.AdsPreference;
+import com.vidswift.downloader.allvideosaver.earn.Preference;
 
-public class A4_PrivacyActivity extends BaseActivity {
+public class PolicyActivity extends BaseActivity {
 
     private ActivityPrivacyBinding binding;
 
@@ -29,7 +29,7 @@ public class A4_PrivacyActivity extends BaseActivity {
         webSettings.setJavaScriptEnabled(true);
         binding.webView.setWebViewClient(new WebViewClient());
 
-        String privacyUrl = AdsPreference.getPrivacyPolicyUrl();
+        String privacyUrl = Preference.getPrivacyPolicyUrl();
         if (!privacyUrl.isEmpty()) {
             binding.webView.loadUrl(privacyUrl);
         } else {

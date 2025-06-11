@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import static android.view.View.INVISIBLE;
 
@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.vidswift.downloader.allvideosaver.R;
 import com.vidswift.downloader.allvideosaver.databinding.ActivityLanguagesBinding;
 import com.vidswift.downloader.allvideosaver.databinding.ItemLanguageBinding;
-import com.vidswift.downloader.allvideosaver.model.LanguageModel;
+import com.vidswift.downloader.allvideosaver.nexts.LanguageModel;
 
 import java.util.ArrayList;
 import java.util.List;

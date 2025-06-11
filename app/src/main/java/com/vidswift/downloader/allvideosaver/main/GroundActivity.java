@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 
-public class HomeActivity extends BaseActivity {
+public class GroundActivity extends BaseActivity {
     private static final String DOWNLOAD_SUBDIR = "VideoDownloader";
     private static final int REQUEST_CODE_PERMISSIONS = 100;
 
@@ -100,14 +100,14 @@ public class HomeActivity extends BaseActivity {
         updateVisibility();
 
         binding.btnSettings.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
+            Intent intent = new Intent(GroundActivity.this, PrivatesActivity.class);
             startActivity(intent);
         });
 
         binding.btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(GroundActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -115,7 +115,7 @@ public class HomeActivity extends BaseActivity {
         binding.btnHashtag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, HasTagActivity.class);
+                Intent intent = new Intent(GroundActivity.this, HasTagActivity.class);
                 startActivity(intent);
             }
         });
@@ -222,7 +222,7 @@ public class HomeActivity extends BaseActivity {
                 .setMessage(message)
                 .setPositiveButton("OK", (dialog, which) -> {
                     ActivityCompat.requestPermissions(
-                            HomeActivity.this,
+                            GroundActivity.this,
                             permissionsToRequest,
                             REQUEST_CODE_PERMISSIONS
                     );
@@ -551,7 +551,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, A7_ExitActivity.class);
+        Intent intent = new Intent(this, PhoneActivity.class);
         startActivity(intent);
     }
 }

@@ -16,7 +16,7 @@
     </queries>
 
     <application
-        android:name=".spalsh.MyApplication"
+        android:name=".main.Launcher"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -30,40 +30,40 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".spalsh.DiamondGuideActivity"
+            android:name=".main.DiamondGuideActivity"
             android:exported="false" />
         <activity
-            android:name=".spalsh.SettingActivity"
+            android:name=".main.PrivatesActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.HasDetailsActivity"
+            android:name=".main.HasDetailsActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.ProfilePreviewActivity"
+            android:name=".main.ProfilePreviewActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.ProfileDownLoadActivity"
+            android:name=".main.ProfileDownLoadActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.HasTagActivity"
+            android:name=".main.HasTagActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.ProfileActivity"
+            android:name=".main.ProfileActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.A1_SplashActivity"
+            android:name=".main.StartActivity"
             android:exported="true"
             android:launchMode="standard"
             android:screenOrientation="portrait">
@@ -74,47 +74,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".spalsh.A4_PrivacyActivity"
+            android:name=".main.PolicyActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.A7_ExitActivity"
+            android:name=".main.PhoneActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.BaseActivity"
+            android:name=".main.BaseActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.LanguageActivity"
+            android:name=".main.LanguageActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.HomeActivity"
+            android:name=".main.GroundActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.OnboardingActivity"
+            android:name=".main.OnboardingActivity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.How3Activity"
+            android:name=".main.How3Activity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.How2Activity"
+            android:name=".main.How2Activity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".spalsh.How1Activity"
+            android:name=".main.How1Activity"
             android:exported="false"
             android:launchMode="standard"
             android:screenOrientation="portrait" />

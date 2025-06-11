@@ -8,7 +8,7 @@
     android:background="#EFF1F5"
     android:orientation="vertical"
 
-    tools:context=".spalsh.A1_SplashActivity">
+    tools:context=".main.StartActivity">
 
 
     <FrameLayout

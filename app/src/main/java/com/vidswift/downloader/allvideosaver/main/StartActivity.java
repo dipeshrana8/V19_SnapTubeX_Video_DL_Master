@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,10 +10,10 @@ import com.onesignal.Continue;
 import com.onesignal.OneSignal;
 import com.onesignal.debug.LogLevel;
 import com.vidswift.downloader.allvideosaver.databinding.ActivitySplashBinding;
-import com.vidswift.downloader.allvideosaver.myAds.AdsPreference;
+import com.vidswift.downloader.allvideosaver.earn.Preference;
 
 
-public class A1_SplashActivity extends BaseActivity {
+public class StartActivity extends BaseActivity {
 
     ActivitySplashBinding binding;
     private boolean IntroChecked = false;
@@ -36,7 +36,7 @@ public class A1_SplashActivity extends BaseActivity {
 
         OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
 
-        String oneSignalAppId = AdsPreference.getOneSignalAppId();
+        String oneSignalAppId = Preference.getOneSignalAppId();
         if (!oneSignalAppId.isEmpty()) {
             OneSignal.initWithContext(this, oneSignalAppId);
 
@@ -46,11 +46,11 @@ public class A1_SplashActivity extends BaseActivity {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             if (IntroChecked) {
 
-                startActivity(new Intent(A1_SplashActivity.this, HomeActivity.class));
+                startActivity(new Intent(StartActivity.this, GroundActivity.class));
                 finish();
             } else {
 
-                startActivity(new Intent(A1_SplashActivity.this, OnboardingActivity.class));
+                startActivity(new Intent(StartActivity.this, OnboardingActivity.class));
                 finish();
             }
         }, 3500);

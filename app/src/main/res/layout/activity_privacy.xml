@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EFF1F5"
     android:orientation="vertical"
-    tools:context=".spalsh.A4_PrivacyActivity">
+    tools:context=".main.PolicyActivity">
 
     <include
         android:id="@+id/toolbarLayout"

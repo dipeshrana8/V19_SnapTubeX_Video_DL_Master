@@ -1,25 +1,25 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.vidswift.downloader.allvideosaver.databinding.ActivityHow1Binding;
+import com.vidswift.downloader.allvideosaver.databinding.ActivityHow2Binding;
 
-public class How1Activity extends BaseActivity {
+public class How2Activity extends BaseActivity {
 
-    ActivityHow1Binding binding;
+    ActivityHow2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityHow1Binding.inflate(getLayoutInflater());
+        binding = ActivityHow2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         binding.toolbarLayout.btnBack.setOnClickListener(v -> myBackActivity());
         binding.toolbarLayout.headerTitle.setText("How To Use");
+
         binding.btnNext.setOnClickListener(v -> {
 
-            Intent intent = new Intent(How1Activity.this, How2Activity.class);
+            Intent intent = new Intent(How2Activity.this, How3Activity.class);
             startActivity(intent);
         });
 

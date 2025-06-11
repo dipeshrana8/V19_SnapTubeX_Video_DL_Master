@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.myAds;
+package com.vidswift.downloader.allvideosaver.earn;
 
 import android.app.Application;
 

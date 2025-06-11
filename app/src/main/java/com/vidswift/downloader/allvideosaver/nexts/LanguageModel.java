@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.model;
+package com.vidswift.downloader.allvideosaver.nexts;
 
 public class LanguageModel {
     private final String languageName;

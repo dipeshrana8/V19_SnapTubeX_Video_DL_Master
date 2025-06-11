@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,7 +8,7 @@ import android.os.Environment;
 import com.vidswift.downloader.allvideosaver.R;
 import com.vidswift.downloader.allvideosaver.databinding.ActivitySettingBinding;
 
-public class SettingActivity extends BaseActivity {
+public class PrivatesActivity extends BaseActivity {
     boolean wifiOnly;
     private ActivitySettingBinding binding;
 
@@ -49,7 +49,7 @@ public class SettingActivity extends BaseActivity {
             shareApp();
         });
         binding.btnPrivacy.setOnClickListener(v -> {
-            Intent intent = new Intent(this, A4_PrivacyActivity.class);
+            Intent intent = new Intent(this, PolicyActivity.class);
             startActivity(intent);
         });
     }

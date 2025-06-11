@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.myAds;
+package com.vidswift.downloader.allvideosaver.earn;
 
 
 import android.annotation.SuppressLint;
@@ -27,7 +27,7 @@ public class WebNativeAds {
 
     @SuppressLint("WrongConstant")
     public static void NativeClass(FrameLayout frameLayout, final Context context) {
-        if (AdsPreference.getNative_show()) {
+        if (Preference.getNative_show()) {
 
             View adView = LayoutInflater.from(context).inflate(R.layout.native_ad, null);
             TextView titleView = adView.findViewById(R.id.tv_ad_title);
@@ -42,7 +42,7 @@ public class WebNativeAds {
             View.OnClickListener redirectListener = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String redirectUrl = AdsPreference.getnative_redirect_link();
+                    String redirectUrl = Preference.getnative_redirect_link();
                     launchCustomTab(context, redirectUrl);
                 }
             };
@@ -56,7 +56,7 @@ public class WebNativeAds {
     }
 
     private static void loadRandomImage(Context context, ImageView imageView) {
-        ArrayList<String> imageUrls = AdsPreference.getStringListPref();
+        ArrayList<String> imageUrls = Preference.getStringListPref();
         if (imageUrls != null && !imageUrls.isEmpty()) {
             String randomImageUrl = imageUrls.get(new Random().nextInt(imageUrls.size()));
             Glide.with(context).load(randomImageUrl).into(imageView);

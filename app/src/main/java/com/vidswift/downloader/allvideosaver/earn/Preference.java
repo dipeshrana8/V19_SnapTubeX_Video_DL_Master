@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.myAds;
+package com.vidswift.downloader.allvideosaver.earn;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,7 +9,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
-public class AdsPreference {
+public class Preference {
 
     public static final String Native_OnOff = "native_show";
     public static final String Interstitial_OnOff = "interstial_onoff";

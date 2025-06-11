@@ -1,10 +1,10 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.os.Bundle;
 
 import com.vidswift.downloader.allvideosaver.databinding.ActivityExitBinding;
 
-public class A7_ExitActivity extends BaseActivity {
+public class PhoneActivity extends BaseActivity {
 
     ActivityExitBinding binding;
 

@@ -16,8 +16,8 @@
 #=======================
 #  3) OPTIONAL: strip Log calls (release only)
 #=======================
--keep class com.vidswift.downloader.allvideosaver.model.** { *; }
--keep class com.vidswift.downloader.allvideosaver.myAds.** { *; }
+-keep class com.vidswift.downloader.allvideosaver.nexts.** { *; }
+-keep class com.vidswift.downloader.allvideosaver.earn.** { *; }
 -keep class com.vidswift.downloader.allvideosaver.download.** { *; }
 -assumenosideeffects class android.util.Log {
     public static *** d(...);

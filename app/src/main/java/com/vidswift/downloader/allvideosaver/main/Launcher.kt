@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh
+package com.vidswift.downloader.allvideosaver.main
 
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
@@ -6,14 +6,14 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.vidswift.downloader.allvideosaver.R
-import com.vidswift.downloader.allvideosaver.myAds.AdsPreference
-import com.vidswift.downloader.allvideosaver.myAds.MyController
+import com.vidswift.downloader.allvideosaver.earn.Preference
+import com.vidswift.downloader.allvideosaver.earn.MyController
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
 
-class MyApplication : MyController() {
+class Launcher : MyController() {
 
     private var editor: SharedPreferences.Editor? = null
 
@@ -52,12 +52,12 @@ class MyApplication : MyController() {
 
                     val jsonObject = JSONObject(jsonString)
 
-                    AdsPreference.setNative_show(
+                    Preference.setNative_show(
                         jsonObject.optBoolean(
-                            AdsPreference.Native_OnOff, false
+                            Preference.Native_OnOff, false
                         )
                     )
-                    AdsPreference.setIninterstialWeb(
+                    Preference.setIninterstialWeb(
                         jsonObject.optBoolean(
                             "interstial_onoff",
                             false
@@ -65,21 +65,21 @@ class MyApplication : MyController() {
                     )
 
                     val bannerImageArray = extractStringList(jsonObject, "daily_BannerImage")
-                    AdsPreference.setStringListPref(bannerImageArray)
+                    Preference.setStringListPref(bannerImageArray)
 
                     val multipleLinkArray = extractStringList(jsonObject, "multiple_link")
                     if (multipleLinkArray.isNotEmpty()) {
                         val selectedLink = multipleLinkArray.random()
-                        AdsPreference.setRedirectLink(selectedLink)
-                        AdsPreference.setnative_link(selectedLink)
-                        AdsPreference.setappopen_redirect(selectedLink)
+                        Preference.setRedirectLink(selectedLink)
+                        Preference.setnative_link(selectedLink)
+                        Preference.setappopen_redirect(selectedLink)
                     }
 
                     val privacyPolicyUrl = jsonObject.optString("privacy_policy_link", "")
-                    AdsPreference.setPrivacyPolicyUrl(privacyPolicyUrl)
+                    Preference.setPrivacyPolicyUrl(privacyPolicyUrl)
 
                     val oneSignalAppId = jsonObject.optString("onesignal_id", "")
-                    AdsPreference.setOneSignalAppId(oneSignalAppId)
+                    Preference.setOneSignalAppId(oneSignalAppId)
 
 
                 } catch (e: Exception) {

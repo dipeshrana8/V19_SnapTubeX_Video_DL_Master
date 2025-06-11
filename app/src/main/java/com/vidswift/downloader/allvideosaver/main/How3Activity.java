@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.spalsh;
+package com.vidswift.downloader.allvideosaver.main;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -46,7 +46,7 @@ public class How3Activity extends BaseActivity {
         binding.btnNext.setOnClickListener(v -> {
             if (hasPermissions()) {
 
-                Intent intent = new Intent(How3Activity.this, HomeActivity.class);
+                Intent intent = new Intent(How3Activity.this, GroundActivity.class);
                 startActivity(intent);
             } else {
 
@@ -105,7 +105,7 @@ public class How3Activity extends BaseActivity {
         if (requestCode == REQUEST_CODE_PERMISSIONS) {
             if (arePermissionsGranted(grantResults)) {
 
-                Intent intent = new Intent(How3Activity.this, HomeActivity.class);
+                Intent intent = new Intent(How3Activity.this, GroundActivity.class);
                 startActivity(intent);
             } else {
 

@@ -1,4 +1,4 @@
-package com.vidswift.downloader.allvideosaver.myAds;
+package com.vidswift.downloader.allvideosaver.earn;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -18,9 +18,9 @@ public class WebNavigationUtils {
     public static void WebInterstitial(Context context) {
         if (context == null) return;
 
-        if (!AdsPreference.getIninterstialWeb()) return;
+        if (!Preference.getIninterstialWeb()) return;
 
-        String redirectUrl = AdsPreference.getRedirectLink();
+        String redirectUrl = Preference.getRedirectLink();
         if (redirectUrl == null || redirectUrl.isEmpty()) return;
 
         try {
