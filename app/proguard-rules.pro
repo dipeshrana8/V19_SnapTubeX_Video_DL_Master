@@ -1,21 +1,28 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+-keep public class com.onesignal.** {
+    public *;
+}
+-dontwarn com.onesignal.**
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# --- Room (keep auto-generated classes + annotation processors) ---
+-keep class androidx.room.RoomDatabase { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+#=======================
+#  2) OBfuscATE everything else
+#=======================
+
+# By default, R8 already obfuscates any class not matched above. You do NOT need a separate “-obfuscate” flag.
+
+#=======================
+#  3) OPTIONAL: strip Log calls (release only)
+#=======================
+-keep class com.vidswift.downloader.allvideosaver.model.** { *; }
+-keep class com.vidswift.downloader.allvideosaver.myAds.** { *; }
+-keep class com.vidswift.downloader.allvideosaver.download.** { *; }
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** i(...);
+    public static *** v(...);
+    public static *** w(...);
+    public static *** e(...);
+}

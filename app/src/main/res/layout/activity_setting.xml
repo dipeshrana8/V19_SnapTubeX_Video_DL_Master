@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F5"
+    android:orientation="vertical"
+    tools:context=".spalsh.SettingActivity">
+
+    <include
+        android:id="@+id/toolbarLayout"
+        layout="@layout/toolbar_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frameNative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/_5sdp"
+
+                    android:minHeight="@dimen/_180sdp" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Download Setting"
+                    android:textColor="#0E2D5E"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginVertical="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/imgWifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_wifi_only_off" />
+
+                    <TextView
+                        android:id="@+id/txtPath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_38sdp"
+                        android:adjustViewBounds="true"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:freezesText="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="path://"
+                        android:textColor="#BCBCBC"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                    <View
+                        android:id="@+id/btnWifi"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:adjustViewBounds="true"
+                        android:fontFamily="@font/poppins_regular" />
+                </FrameLayout>
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="General Setting"
+                    android:textColor="#0E2D5E"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/frameUpper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginVertical="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_language" />
+
+                    <TextView
+                        android:id="@+id/txtLang"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:adjustViewBounds="true"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="English"
+                        android:textColor="#0E2D5E"
+                        android:textSize="@dimen/_10ssp" />
+                </FrameLayout>
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Help"
+                    android:textColor="#0E2D5E"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginVertical="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_rate_us" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <View
+                            android:id="@+id/btnRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:id="@+id/btnShare"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:id="@+id/btnPrivacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/btnHowToDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/imh_how_to_dpwnload" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

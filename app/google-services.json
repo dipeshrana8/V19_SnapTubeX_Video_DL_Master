@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628863218930",
+    "project_id": "comgetfreediamonds",
+    "storage_bucket": "comgetfreediamonds.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628863218930:android:096dc6c35665efb9b3cc6b",
+        "android_client_info": {
+          "package_name": "com.vidswift.downloader.allvideosaver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZxUcXDhT1PcdZYGvseJ2P4jIVf-RpAsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
